@@ -22,6 +22,10 @@
     streamcontroller
     chatterino7
     vlc
+    wine
+    wine64
+    winetricks
+    socat # proxy for MisterFPGA
   ];
 
   virtualisation.docker.enable = true;

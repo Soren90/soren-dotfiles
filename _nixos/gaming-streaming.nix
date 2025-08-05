@@ -17,14 +17,32 @@
     enable = true;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    gamescopeSession.enable = true;
   };
 
-  # testing for OBS
+#  programs.gamescope = {
+#    enable = true;
+#    capSysNice = true;
+#  }
+
+  environment.systemPackages = with pkgs; [
+    mangohud
+    protonup
+  ];
+
+  programs.gamemode.enable = true;
+
   environment.sessionVariables = {
-  # Force hardware acceleration for CEF
-    ENABLE_HARDWARE_ACCELERATION = "1";
-    ANGLE_DEFAULT_PLATFORM = "vulkan";
+    STEAM_EXTRA_COMPAT_TOOLS_PATH = 
+      "/home/soren/.steam/root/compatibilitytools.d";
   };
+
+ # # testing for OBS
+ # environment.sessionVariables = {
+ # # Force hardware acceleration for CEF
+ #   ENABLE_HARDWARE_ACCELERATION = "1";
+ #   ANGLE_DEFAULT_PLATFORM = "vulkan";
+ # };
 
   # FXPAK/Wooting keyboard
   services.udev.extraRules = ''

@@ -26,6 +26,7 @@
     hyprshot # Screenshot
     hypridle # Hibernation
     hyprcursor # unified curser themes
+    hyprlandPlugins.csgo-vulkan-fix
     waybar # Navigation bar
     wofi # Application launcher
     swaynotificationcenter
@@ -43,6 +44,7 @@
     pulseaudio # needed for waybar volume control
     yad # Diaglog manager for waybar calendar
     stow # dotfile manager
+    pkgs.catppuccin-sddm
   ];
 
 
@@ -65,8 +67,13 @@
   };
 
   # Login manager
-  services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
+
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "catppuccin-mocha";
+    package = pkgs.kdePackages.sddm;
+  };
 
   # Waybar font
   fonts.packages = with pkgs; [ nerd-fonts.jetbrains-mono nerd-fonts.meslo-lg ubuntu_font_family ];
