@@ -10,6 +10,7 @@
       ./window-manager.nix
       ./user-installed.nix
       ./gaming-streaming.nix
+      ./kvm.nix
     ];
 
   # Bootloader.
