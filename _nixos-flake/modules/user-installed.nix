@@ -48,7 +48,7 @@
   users.users.soren = {
     isNormalUser = true;
     description = "Soren";
-    extraGroups = [ "networkmanager" "wheel" "docker" "input" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" "input" "libvirtd" ];
     useDefaultShell = true;
     packages = with pkgs; [];
   };
