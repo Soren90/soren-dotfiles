@@ -4,7 +4,7 @@
 
 programs.virt-manager.enable = true;
 
-users.groups.libvirtd.members = ["your_username"];
+users.groups.libvirtd.members = ["soren"];
 
 virtualisation.libvirtd.enable = true;
 
