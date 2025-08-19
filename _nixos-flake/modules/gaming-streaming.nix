@@ -27,14 +27,6 @@
     
   };
 
- Sunshine error: Failed to gain CAP_SYS_ADMIN
-  security.wrappers.sunshine = {
-        owner = "root";
-        group = "root";
-        capabilities = "cap_sys_admin+p";
-        source = "${pkgs.sunshine}/bin/sunshine";
-  };
-
   # testing for OBS
   environment.sessionVariables = {
   # Force hardware acceleration for CEF
