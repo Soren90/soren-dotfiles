@@ -46,6 +46,8 @@
     pkgs.catppuccin-sddm
   ];
 
+  # Needed for thunar smb
+  services.gvfs.enable = true;
 
   # This is needed for waybar volume control  
   services.pipewire = {

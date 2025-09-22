@@ -25,6 +25,8 @@
     wine
     wine64
     winetricks
+    chromium
+    kdePackages.kdenlive
   ];
 
   virtualisation.docker.enable = true;
